@@ -38,21 +38,8 @@ const routes = [
         name: "manageorder",
         component: () => import("@/views/admin/order.vue")
     },
-    {
-        path: "/admin/statistic",
-        name: "statistic",
-        component: () => import("@/views/admin/statistic.vue")
-    },
-    {
-        path: "/month",
-        name: "statisticwithmoth",
-        component: () => import("@/views/admin/month.vue")
-    },
-    {
-        path: "/statistic",
-        name: "statisticproductc",
-        component: () => import("@/views/admin/day.vue")
-    },
+
+ 
     {
         path: "/admin/products/add",
         name: "statisticwithday",
