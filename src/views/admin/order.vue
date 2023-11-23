@@ -8,6 +8,8 @@
               <tr>
                 <th>Mã đơn hàng</th>
                 <th>Khách hàng</th>
+                <th>Số điện thoại</th>
+                <th>Địa chỉ</th>
                 <th>Tổng giá trị</th>
                 <th>Trạng thái</th>
                 <th></th>
@@ -17,18 +19,19 @@
               <tr v-for="order in orders" :key="order._id">
                 <td>{{ order._id }}</td>
                 <td>{{ order.user.name }}</td>
-                <td>{{ order.total }} đồng</td>
+                <td>{{ order.user.phone }}</td>
+                <td>{{ order.user.address }}</td>
+                <td>{{ order.total }}.000 đồng</td>
                 <td>
                   <span v-if="order.status === 'Chờ duyệt'" class="badge bg-warning">Chờ xử lý</span>
                   <span v-if="order.status === 'Đang giao'" class="badge bg-success">Đang giao hàng</span>
-                  <span v-if="order.status === 'Đã giao'" class="badge bg-success">Giao thành công</span>
                 </td>
                 <td v-if="order.status === 'Chờ duyệt'">
                   <button class="btn btn-primary" @click="submitorder(order._id)">Duyệt</button>
                 </td>
-                <td v-if="order.status === 'Đã giao'">
+                <!-- <td v-if="order.status === 'Đã giao'">
                   <button class="btn btn-primary" @click="submitorder(order._id)">Gửi xác nhận</button>
-                </td>
+                </td> -->
                 <td v-else></td>
               </tr>
             </tbody>

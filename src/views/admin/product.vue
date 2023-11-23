@@ -24,7 +24,7 @@
                 <td>{{ product.id }}</td>
                 <td>{{ product.name }}</td>
                 <td>{{ product.description }}</td>
-                <td>{{ product.price }}</td>
+                <td>{{ product.price }}.000 </td>
                 <td>
                   <router-link :to="'/admin/products/edit/' + product.id" class="btn btn-warning btn-sm mr-2" >
                     <i class="fa-regular fa-pen-to-square"></i>
